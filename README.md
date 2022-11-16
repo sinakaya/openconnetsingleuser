@@ -27,42 +27,42 @@ sudo bash ocserv-install.sh
 1. Install Docker
 2. Build docker image
 ```bash
-docker build -t threeuser https://github.com/sinakaya/openconnetsingleuser.git#main
+docker build -t letstest https://github.com/sinakaya/openconnetsingleuser.git#main
 ```
 
 3. Run docker container
 ```bash
-docker run --name threeuser --privileged -p 443:443 -p 443:443/udp -d threeuser
+docker run --name letstest --privileged -p 443:443 -p 443:443/udp -d letstest
 ```
 
 4. Add user
 ```bash
-docker exec -ti threeuser ocpasswd -c /etc/ocserv/ocpasswd testUserName
+docker exec -ti letstest ocpasswd -c /etc/ocserv/ocpasswd testUserName
 ```
 
 5. Change user password
 ```bash
-docker exec -ti threeuser ocpasswd -c /etc/ocserv/ocpasswd testUserName
+docker exec -ti letstest ocpasswd -c /etc/ocserv/ocpasswd testUserName
 ```
 
 6. Delete user
 ```bash
-docker exec -ti threeuser ocpasswd -c /etc/ocserv/ocpasswd -d testUserName
+docker exec -ti letstest ocpasswd -c /etc/ocserv/ocpasswd -d testUserName
 ```
 
 7. Lock user
 ```bash
-docker exec -ti threeuser ocpasswd -c /etc/ocserv/ocpasswd -l testUserName
+docker exec -ti letstest ocpasswd -c /etc/ocserv/ocpasswd -l testUserName
 ```
 
 8. Unlock user
 ```bash
-docker exec -ti threeuser ocpasswd -c /etc/ocserv/ocpasswd -u testUserName
+docker exec -ti letstest ocpasswd -c /etc/ocserv/ocpasswd -u testUserName
 ```
 
 9. Show all users and their hashed password
 ```bash
-docker exec -ti threeuser cat /etc/ocserv/ocpasswd
+docker exec -ti letstest cat /etc/ocserv/ocpasswd
 ```
 
 ## Features
